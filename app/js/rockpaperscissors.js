@@ -39,11 +39,8 @@ getComputerMove();
 
 function getWinner(playerMove,computerMove) {
     var winner;
-	getWinner('scissors','rock')
-	function getWinner(playerMove,computerMove) {
-
-  
-	 if (playerMove === 'rock')  {
+	
+	if (playerMove === 'rock')  {
 	    if (computerMove === 'scissors') {
 	        winner = 'Player';
 	    }
