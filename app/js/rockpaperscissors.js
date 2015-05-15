@@ -21,7 +21,7 @@ function randomPlay() {
 /*           Write Your Code Below            */
 ////////////////////////////////////////////////
 
-getPlayerMove();
+
 	function getPlayerMove(move) {
 	if (move && true) {
 	    return move;
@@ -29,7 +29,7 @@ getPlayerMove();
 		return getInput();
 }
 
-getComputerMove();
+
 	function getComputerMove(move) {
 	if (move && true) {
 	    return move;
@@ -72,11 +72,45 @@ function getWinner(playerMove,computerMove) {
 }
 
 function playToFive() {
-    console.log("Let's play Rock, Paper, Scissors");
-    var playerWins = 0;
-    var computerWins = 0;
-    // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
-    /* YOUR CODE HERE */
-    return [playerWins, computerWins];
+  console.log("Let's play Rock, Paper, Scissors");  
+    var playerWins = [];
+    var computerWins = [];
+    var move = (playerMove,computerMove);
+    
+    while (computerWins.length <5 && playerWins.length <5) {
+        var playerMove = getPlayerMove(move);
+		var computerMove = getComputerMove(move);
+		var winner = getWinner(playerMove,computerMove);
+		 
+		if (playerMove === computerMove){
+		     console.log("It's a tie!");
+		}
+        if (winner === 'computer') {
+            
+            
+            computerWins.push(winner);
+            
+        }
+        if (winner === 'player') {
+            
+            
+            playerWins.push(winner);
+            
+        }
+        if (playerWins.length === 5 ) {
+            console.log('Game over! You Win!, Computer Loses.');
+            }
+        if (computerWins.length === 5) {
+            console.log('Game over! You Lose, Computer Wins!');
+            }
+        console.log('You chose ' + playerMove + ' while Computer chose ' + computerMove + '.' );
+        console.log('Score: Computer ' + computerWins.length + ' : Player ' + playerWins.length ); 
+        
+        }
+        return 'Great Game!';
 }
+playToFive();
 
+
+
+//Joel Zorrilla
