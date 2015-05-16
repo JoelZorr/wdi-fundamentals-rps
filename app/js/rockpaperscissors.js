@@ -42,34 +42,43 @@ function getWinner(playerMove,computerMove) {
 	
 	if (playerMove === 'rock')  {
 	    if (computerMove === 'scissors') {
-	        winner = 'Player';
+	        winner = 'player';
+	        console.log('Player Wins!');
 	    }
 	    else if (computerMove === 'paper') {
 	        winner = 'computer';
+	        console.log('Computer Wins!');
 	    }
 	    else if (playerMove === computerMove) {
-	        winner = 'tie'
+	        winner = 'tie';
+	        
 	    }
+	    
 	 }
 	 else if (playerMove === 'paper') {
 	     if (computerMove === 'rock') {
 	         winner = 'player';
+	         console.log('Player Wins!');
 	     }
 	     else if (computerMove === 'scissors') {
 	        winner = 'computer';
+	        console.log('Computer Wins!');
 	     } 
+	     
 	 }
 	 else if (playerMove === 'scissors') {
 	     if (computerMove === 'paper') {
 	         winner = 'player';
+	         console.log('Player Wins!'); 
 	     }
 	     else if (computerMove === 'rock') {
 	         winner = 'computer';
+	         console.log('Computer Wins!');
 	     }
-	 }
-	 
+	    }
 	 return winner;
 }
+
 
 function playToFive() {
   console.log("Let's play Rock, Paper, Scissors");  
